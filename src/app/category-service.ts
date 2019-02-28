@@ -20,4 +20,8 @@ export class CategoryService {
     return this.http.get<Category[]>(API_ENDPOINT + '/categories');
   }
 
+  postCategory(category: string): Observable<Category[]> {
+    return this.http.post<Category[]>(API_ENDPOINT + '/categories', category);
+  }
+
 }
